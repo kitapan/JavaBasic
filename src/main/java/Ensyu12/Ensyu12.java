@@ -9,13 +9,13 @@ package Ensyu12;
 //　それをmainメソッドから実行して、実行結果をコンソールに出力する
 
 
-import java.util.List;
+import java.util.List;  // Listを使用するためのインポート
 
-public class Ensyu12 {
+public class Ensyu12 {  // メインクラス
 
-  public static void main(String[] args) {
-    Library library = new Library();
-    List<Book> newBooks = List.of(
+  public static void main(String[] args) {  // プログラムのエントリーポイント
+    Library library = new Library();  // Libraryクラスのインスタンスを作成
+    List<Book> newBooks = List.of(  // 複数のBookオブジェクトを作成し、リストにまとめる
         new Book("プロになるJava","杉山貴章",1),
         new Book("スッキリわかるJava入門","中山清喬",2),
         new Book("スッキリわかるPython入門","国本大悟",3),
@@ -23,8 +23,9 @@ public class Ensyu12 {
         new Book("Adobe Firefly完全ガイド","吉岡豊",5)
     );
 
-    library.addBook(newBooks);
+    library.addBook(newBooks);  // 新しい本のリストをライブラリに追加
 
+//    // 個別にBookオブジェクトを作成し、ライブラリに追加する方法のコメントアウト例
 //    Book book1 = new Book("プロになるJava","杉山貴章",1);
 //    Book book2 = new Book("スッキリわかるJava入門","中山清喬",2);
 //    Book book3 = new Book("スッキリわかるPython入門","国本大悟",3);
@@ -37,9 +38,8 @@ public class Ensyu12 {
 //    library.addBook(book4);
 //    library.addBook(book5);
 
-    for (Book book : library.getBooks()) {
+    for (Book book : library.getBooks()) {  // ライブラリに追加された全ての本のタイトルを表示
       System.out.println(book.getTitle());
     }
   }
-
 }
